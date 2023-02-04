@@ -1,0 +1,1921 @@
+{
+  "info": {
+    "name": "api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.example.com",
+      "type": "string"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "auth": {
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ],
+    "type": "bearer"
+  },
+  "item": [
+    {
+      "name": "Add Ons",
+      "item": [
+        {
+          "name": "Create a new add-on",
+          "request": {
+            "description": "Create a new add-on",
+            "url": {
+              "raw": "{{baseUrl}}/add_ons",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "add_ons"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"add_on\": {\n        \"name\": \"example\",\n        \"code\": \"example\",\n        \"description\": \"example\",\n        \"amount_cents\": 0,\n        \"amount_currency\": \"example\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find add-on by code",
+          "request": {
+            "description": "Return a single add-on",
+            "url": {
+              "raw": "{{baseUrl}}/add_ons/:code",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "add_ons",
+                ":code"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "code",
+                  "value": "",
+                  "description": "Code of the existing add-on"
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Update an existing add-on",
+          "request": {
+            "description": "Update an existing add-on by code",
+            "url": {
+              "raw": "{{baseUrl}}/add_ons/:code",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "add_ons",
+                ":code"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "code",
+                  "value": "",
+                  "description": "Code of the existing add-on"
+                }
+              ]
+            },
+            "header": [],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"add_on\": {\n        \"name\": \"example\",\n        \"code\": \"example\",\n        \"description\": \"example\",\n        \"amount_cents\": 0,\n        \"amount_currency\": \"example\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Delete an add-on",
+          "request": {
+            "description": "Delete an add-on",
+            "url": {
+              "raw": "{{baseUrl}}/add_ons/:code",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "add_ons",
+                ":code"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "code",
+                  "value": "",
+                  "description": "Code of the existing add-on"
+                }
+              ]
+            },
+            "header": [],
+            "method": "DELETE"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find add-ons",
+          "request": {
+            "description": "Find all add-ons in certain organisation",
+            "url": {
+              "raw": "{{baseUrl}}/add_ons?page=&per_page=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "add_ons"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "",
+                  "description": "Number of page"
+                },
+                {
+                  "key": "per_page",
+                  "value": "",
+                  "description": "Number of records per page"
+                }
+              ],
+              "variable": []
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Apply an add-on to a customer",
+          "request": {
+            "description": "Apply an add-on to a customer",
+            "url": {
+              "raw": "{{baseUrl}}/applied_add_ons",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "applied_add_ons"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"applied_add_on\": {\n        \"external_customer_id\": \"example\",\n        \"add_on_code\": \"example\",\n        \"amount_cents\": 0,\n        \"amount_currency\": \"example\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    },
+    {
+      "name": "Billable Metrics",
+      "item": [
+        {
+          "name": "Create a new billable metric",
+          "request": {
+            "description": "Create a new billable metric",
+            "url": {
+              "raw": "{{baseUrl}}/billable_metrics",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "billable_metrics"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"billable_metric\": {\n        \"name\": \"example\",\n        \"code\": \"example\",\n        \"description\": \"example\",\n        \"field_name\": \"example\",\n        \"aggregation_type\": \"count_agg\",\n        \"group\": {\n            \"key\": \"example\",\n            \"values\": [\n                \"UNKNOWN\"\n            ]\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find billable metric by code",
+          "request": {
+            "description": "Return a single billable metric",
+            "url": {
+              "raw": "{{baseUrl}}/billable_metrics/:code",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "billable_metrics",
+                ":code"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "code",
+                  "value": "",
+                  "description": "Code of the existing billable metric"
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Update an existing billable metric",
+          "request": {
+            "description": "Update an existing billable metric by code",
+            "url": {
+              "raw": "{{baseUrl}}/billable_metrics/:code",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "billable_metrics",
+                ":code"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "code",
+                  "value": "",
+                  "description": "Code of the existing billable metric"
+                }
+              ]
+            },
+            "header": [],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"billable_metric\": {\n        \"name\": \"example\",\n        \"code\": \"example\",\n        \"description\": \"example\",\n        \"field_name\": \"example\",\n        \"aggregation_type\": \"count_agg\",\n        \"group\": {\n            \"key\": \"example\",\n            \"values\": [\n                \"UNKNOWN\"\n            ]\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Delete a billable metric",
+          "request": {
+            "description": "Delete a billable metric",
+            "url": {
+              "raw": "{{baseUrl}}/billable_metrics/:code",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "billable_metrics",
+                ":code"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "code",
+                  "value": "",
+                  "description": "Code of the existing billable metric"
+                }
+              ]
+            },
+            "header": [],
+            "method": "DELETE"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find Billable metrics",
+          "request": {
+            "description": "Find all billable metrics in certain organisation",
+            "url": {
+              "raw": "{{baseUrl}}/billable_metrics?page=&per_page=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "billable_metrics"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "",
+                  "description": "Number of page"
+                },
+                {
+                  "key": "per_page",
+                  "value": "",
+                  "description": "Number of records per page"
+                }
+              ],
+              "variable": []
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find Billable metric groups",
+          "request": {
+            "description": "Find all billable metric groups in certain organisation",
+            "url": {
+              "raw": "{{baseUrl}}/billable_metrics/:code/groups?page=&per_page=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "billable_metrics",
+                ":code",
+                "groups"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "",
+                  "description": "Number of page"
+                },
+                {
+                  "key": "per_page",
+                  "value": "",
+                  "description": "Number of records per page"
+                }
+              ],
+              "variable": [
+                {
+                  "key": "code",
+                  "value": "",
+                  "description": "Code of the existing billable metric"
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    },
+    {
+      "name": "Coupons",
+      "item": [
+        {
+          "name": "Create a new coupon",
+          "request": {
+            "description": "Create a new coupon",
+            "url": {
+              "raw": "{{baseUrl}}/coupons",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "coupons"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"coupon\": {\n        \"name\": \"example\",\n        \"code\": \"example\",\n        \"coupon_type\": \"fixed_amount\",\n        \"amount_cents\": 0,\n        \"amount_currency\": \"example\",\n        \"reusable\": true,\n        \"percentage_rate\": 0,\n        \"frequency\": \"once\",\n        \"frequency_duration\": 0,\n        \"expiration_at\": \"example\",\n        \"expiration\": \"no_expiration\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find coupon by code",
+          "request": {
+            "description": "Return a single coupon",
+            "url": {
+              "raw": "{{baseUrl}}/coupons/:code",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "coupons",
+                ":code"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "code",
+                  "value": "",
+                  "description": "Code of the existing coupon"
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Update an existing coupon",
+          "request": {
+            "description": "Update an existing coupon by code",
+            "url": {
+              "raw": "{{baseUrl}}/coupons/:code",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "coupons",
+                ":code"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "code",
+                  "value": "",
+                  "description": "Code of the existing coupon"
+                }
+              ]
+            },
+            "header": [],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"coupon\": {\n        \"name\": \"example\",\n        \"code\": \"example\",\n        \"coupon_type\": \"fixed_amount\",\n        \"amount_cents\": 0,\n        \"amount_currency\": \"example\",\n        \"reusable\": true,\n        \"percentage_rate\": 0,\n        \"frequency\": \"once\",\n        \"frequency_duration\": 0,\n        \"expiration_at\": \"example\",\n        \"expiration\": \"no_expiration\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Delete a coupon",
+          "request": {
+            "description": "Delete a coupon",
+            "url": {
+              "raw": "{{baseUrl}}/coupons/:code",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "coupons",
+                ":code"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "code",
+                  "value": "",
+                  "description": "Code of the existing coupon"
+                }
+              ]
+            },
+            "header": [],
+            "method": "DELETE"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find Coupons",
+          "request": {
+            "description": "Find all coupons in certain organisation",
+            "url": {
+              "raw": "{{baseUrl}}/coupons?page=&per_page=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "coupons"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "",
+                  "description": "Number of page"
+                },
+                {
+                  "key": "per_page",
+                  "value": "",
+                  "description": "Number of records per page"
+                }
+              ],
+              "variable": []
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Apply a coupon to a customer",
+          "request": {
+            "description": "Apply a coupon to a customer",
+            "url": {
+              "raw": "{{baseUrl}}/applied_coupons",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "applied_coupons"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"applied_coupon\": {\n        \"external_customer_id\": \"example\",\n        \"coupon_code\": \"example\",\n        \"frequency\": \"once\",\n        \"frequency_duration\": 0,\n        \"amount_cents\": 0,\n        \"amount_currency\": \"example\",\n        \"percentage_rate\": 0\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find Applied Coupons",
+          "request": {
+            "description": "Find all applied coupons",
+            "url": {
+              "raw": "{{baseUrl}}/applied_coupons?page=&per_page=&status=&external_customer_id=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "applied_coupons"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "",
+                  "description": "Number of page"
+                },
+                {
+                  "key": "per_page",
+                  "value": "",
+                  "description": "Number of records per page"
+                },
+                {
+                  "key": "status",
+                  "value": "",
+                  "description": "Applied coupon status"
+                },
+                {
+                  "key": "external_customer_id",
+                  "value": "",
+                  "description": "External customer ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    },
+    {
+      "name": "Credit Notes",
+      "item": [
+        {
+          "name": "Create a new Credit note",
+          "request": {
+            "description": "Create a new credit note",
+            "url": {
+              "raw": "{{baseUrl}}/credit_notes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "credit_notes"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"credit_note\": {\n        \"invoice_id\": \"example\",\n        \"reason\": \"duplicated_charge\",\n        \"description\": \"example\",\n        \"credit_amount_cents\": 0,\n        \"refund_amount_cents\": 0,\n        \"items\": [\n            {\n                \"fee_id\": \"example\",\n                \"amount_cents\": 0\n            }\n        ]\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find credit note",
+          "request": {
+            "description": "Return a single credit note",
+            "url": {
+              "raw": "{{baseUrl}}/credit_notes/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "credit_notes",
+                ":id"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "Id of the existing credit note"
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Update an existing credit note",
+          "request": {
+            "description": "Update an existing credit note",
+            "url": {
+              "raw": "{{baseUrl}}/credit_notes/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "credit_notes",
+                ":id"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "Id of the existing credit note"
+                }
+              ]
+            },
+            "header": [],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"credit_note\": {\n        \"invoice_id\": \"example\",\n        \"reason\": \"duplicated_charge\",\n        \"description\": \"example\",\n        \"credit_amount_cents\": 0,\n        \"refund_amount_cents\": 0,\n        \"items\": [\n            {\n                \"fee_id\": \"example\",\n                \"amount_cents\": 0\n            }\n        ]\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Download an existing credit note",
+          "request": {
+            "description": "Download an existing credit note",
+            "url": {
+              "raw": "{{baseUrl}}/credit_notes/:id/download",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "credit_notes",
+                ":id",
+                "download"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "ID of the existing Lago Credit note"
+                }
+              ]
+            },
+            "header": [],
+            "method": "POST"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Void existing credit note",
+          "request": {
+            "description": "Void an existing credit note",
+            "url": {
+              "raw": "{{baseUrl}}/credit_notes/:id/void",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "credit_notes",
+                ":id",
+                "void"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "ID of the existing Lago Credit note"
+                }
+              ]
+            },
+            "header": [],
+            "method": "PUT"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find Credit notes",
+          "request": {
+            "description": "Find all credit notes in certain organisation",
+            "url": {
+              "raw": "{{baseUrl}}/credit_notes?page=&per_page=&external_customer_id=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "credit_notes"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "",
+                  "description": "Number of page"
+                },
+                {
+                  "key": "per_page",
+                  "value": "",
+                  "description": "Number of records per page"
+                },
+                {
+                  "key": "external_customer_id",
+                  "value": "",
+                  "description": "External customer ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    },
+    {
+      "name": "Customers",
+      "item": [
+        {
+          "name": "Create a customer",
+          "request": {
+            "description": "Create a new customer",
+            "url": {
+              "raw": "{{baseUrl}}/customers",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "customers"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"customer\": {\n        \"external_id\": \"example\",\n        \"name\": \"example\",\n        \"country\": \"example\",\n        \"address_line1\": \"example\",\n        \"address_line2\": \"example\",\n        \"state\": \"example\",\n        \"zipode\": \"example\",\n        \"email\": \"example\",\n        \"city\": \"example\",\n        \"url\": \"example\",\n        \"phone\": \"example\",\n        \"lago_url\": \"example\",\n        \"legal_name\": \"example\",\n        \"legal_number\": \"example\",\n        \"currency\": \"example\",\n        \"timezone\": \"example\",\n        \"billing_configuration\": {\n            \"example\": \"UNKNOWN\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find customer by external ID",
+          "request": {
+            "description": "Return a single customer",
+            "url": {
+              "raw": "{{baseUrl}}/customers/:external_id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "customers",
+                ":external_id"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "external_id",
+                  "value": "",
+                  "description": "External ID of the existing customer"
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find customer current usage",
+          "request": {
+            "description": "Return a customer current usage",
+            "url": {
+              "raw": "{{baseUrl}}/customers/:customer_external_id/current_usage?external_subscription_id=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "customers",
+                ":customer_external_id",
+                "current_usage"
+              ],
+              "query": [
+                {
+                  "key": "external_subscription_id",
+                  "value": "",
+                  "description": "External subscription ID"
+                }
+              ],
+              "variable": [
+                {
+                  "key": "customer_external_id",
+                  "value": "",
+                  "description": "External ID of the existing customer"
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find customers",
+          "request": {
+            "description": "Find all customers in certain organisation",
+            "url": {
+              "raw": "{{baseUrl}}/customers?page=&per_page=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "customers"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "",
+                  "description": "Number of page"
+                },
+                {
+                  "key": "per_page",
+                  "value": "",
+                  "description": "Number of records per page"
+                }
+              ],
+              "variable": []
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    },
+    {
+      "name": "Events",
+      "item": [
+        {
+          "name": "Create a new event",
+          "request": {
+            "description": "Create a new event",
+            "url": {
+              "raw": "{{baseUrl}}/events",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "events"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"event\": {\n        \"transaction_id\": \"example\",\n        \"external_customer_id\": \"example\",\n        \"code\": \"example\",\n        \"timestamp\": 0,\n        \"external_subscription_id\": \"example\",\n        \"properties\": {\n            \"example\": \"UNKNOWN\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Create batch events",
+          "request": {
+            "description": "Create batch events",
+            "url": {
+              "raw": "{{baseUrl}}/events/batch",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "events",
+                "batch"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"event\": {\n        \"transaction_id\": \"example\",\n        \"external_customer_id\": \"example\",\n        \"code\": \"example\",\n        \"timestamp\": 0,\n        \"external_subscription_ids\": [\n            \"example\"\n        ],\n        \"properties\": {\n            \"example\": \"UNKNOWN\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find event by transaction ID",
+          "request": {
+            "description": "Return a single event",
+            "url": {
+              "raw": "{{baseUrl}}/events/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "events",
+                ":id"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "Id of the existing transaction"
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    },
+    {
+      "name": "Invoices",
+      "item": [
+        {
+          "name": "Find invoice by ID",
+          "request": {
+            "description": "Return a single invoice",
+            "url": {
+              "raw": "{{baseUrl}}/invoices/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "invoices",
+                ":id"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "ID of the existing Lago Invoice"
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Update an existing invoice status",
+          "request": {
+            "description": "Update an existing invoice",
+            "url": {
+              "raw": "{{baseUrl}}/invoices/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "invoices",
+                ":id"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "ID of the existing Lago Invoice"
+                }
+              ]
+            },
+            "header": [],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"invoice\": {\n        \"lago_id\": \"example\",\n        \"sequential_id\": 0,\n        \"number\": \"example\",\n        \"issuing_date\": \"example\",\n        \"invoice_type\": \"charge\",\n        \"status\": \"draft\",\n        \"payment_status\": \"pending\",\n        \"amount_cents\": 0,\n        \"amount_currency\": \"example\",\n        \"vat_amount_cents\": 0,\n        \"vat_amount_currency\": \"example\",\n        \"credit_amount_cents\": 0,\n        \"credit_amount_currency\": \"example\",\n        \"total_amount_cents\": 0,\n        \"total_amount_currency\": \"example\",\n        \"legacy\": true,\n        \"file_url\": \"example\",\n        \"customer\": {\n            \"lago_id\": \"example\",\n            \"external_id\": \"example\",\n            \"name\": \"example\",\n            \"sequential_id\": 0,\n            \"slug\": \"example\",\n            \"created_at\": \"example\",\n            \"country\": \"example\",\n            \"address_line1\": \"example\",\n            \"address_line2\": \"example\",\n            \"state\": \"example\",\n            \"zipode\": \"example\",\n            \"email\": \"example\",\n            \"city\": \"example\",\n            \"url\": \"example\",\n            \"phone\": \"example\",\n            \"lago_url\": \"example\",\n            \"legal_name\": \"example\",\n            \"legal_number\": \"example\",\n            \"currency\": \"example\",\n            \"timezone\": \"example\",\n            \"applicable_timezone\": \"example\",\n            \"billing_configuration\": {\n                \"example\": \"UNKNOWN\"\n            }\n        },\n        \"subscriptions\": [\n            {\n                \"lago_id\": \"example\",\n                \"external_id\": \"example\",\n                \"lago_customer_id\": \"example\",\n                \"external_customer_id\": \"example\",\n                \"name\": \"example\",\n                \"plan_code\": \"example\",\n                \"status\": \"active\",\n                \"billing_time\": \"calendar\",\n                \"subscription_at\": \"example\",\n                \"started_at\": \"example\",\n                \"terminated_at\": \"example\",\n                \"canceled_at\": \"example\",\n                \"created_at\": \"example\",\n                \"previous_plan_code\": \"example\",\n                \"next_plan_code\": \"example\",\n                \"downgrade_plan_date\": \"example\"\n            }\n        ],\n        \"fees\": [\n            {\n                \"lago_id\": \"example\",\n                \"lago_group_id\": \"example\",\n                \"amount_cents\": 0,\n                \"amount_currency\": \"example\",\n                \"vat_amount_cents\": 0,\n                \"vat_amount_currency\": \"example\",\n                \"units\": 0,\n                \"events_count\": 0,\n                \"item\": {\n                    \"type\": \"calendar\",\n                    \"code\": \"example\",\n                    \"name\": \"example\"\n                }\n            }\n        ],\n        \"credits\": [\n            {\n                \"lago_id\": \"example\",\n                \"amount_cents\": 0,\n                \"amount_currency\": \"example\",\n                \"item\": {\n                    \"lago_id\": \"example\",\n                    \"type\": \"example\",\n                    \"code\": \"example\",\n                    \"name\": \"example\"\n                }\n            }\n        ]\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Download an existing invoice",
+          "request": {
+            "description": "Download an existing invoice",
+            "url": {
+              "raw": "{{baseUrl}}/invoices/:id/download",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "invoices",
+                ":id",
+                "download"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "ID of the existing Lago Invoice"
+                }
+              ]
+            },
+            "header": [],
+            "method": "POST"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Retry invoice payment",
+          "request": {
+            "description": "Retry invoice payment",
+            "url": {
+              "raw": "{{baseUrl}}/invoices/:id/retry_payment",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "invoices",
+                ":id",
+                "retry_payment"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "ID of the existing Lago Invoice"
+                }
+              ]
+            },
+            "header": [],
+            "method": "POST"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Refresh a draft invoice",
+          "request": {
+            "description": "Refresh a draft invoice",
+            "url": {
+              "raw": "{{baseUrl}}/invoices/:id/refresh",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "invoices",
+                ":id",
+                "refresh"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "ID of the existing Lago Invoice"
+                }
+              ]
+            },
+            "header": [],
+            "method": "PUT"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Finalize a draft invoice",
+          "request": {
+            "description": "Finalize a draft invoice",
+            "url": {
+              "raw": "{{baseUrl}}/invoices/:id/finalize",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "invoices",
+                ":id",
+                "finalize"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "ID of the draft Lago Invoice"
+                }
+              ]
+            },
+            "header": [],
+            "method": "PUT"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find all invoices",
+          "request": {
+            "description": "Find all invoices in certain organisation",
+            "url": {
+              "raw": "{{baseUrl}}/invoices?page=&per_page=&external_customer_id=&issuing_date_from=&issuing_date_to=&status=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "invoices"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "",
+                  "description": "Number of page"
+                },
+                {
+                  "key": "per_page",
+                  "value": "",
+                  "description": "Number of records per page"
+                },
+                {
+                  "key": "external_customer_id",
+                  "value": ""
+                },
+                {
+                  "key": "issuing_date_from",
+                  "value": ""
+                },
+                {
+                  "key": "issuing_date_to",
+                  "value": ""
+                },
+                {
+                  "key": "status",
+                  "value": ""
+                }
+              ],
+              "variable": []
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    },
+    {
+      "name": "Organizations",
+      "item": [
+        {
+          "name": "Update an existing Organization",
+          "request": {
+            "description": "Update an existing organization",
+            "url": {
+              "raw": "{{baseUrl}}/organizations",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "organizations"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"organization\": {\n        \"webhook_url\": \"example\",\n        \"country\": \"example\",\n        \"address_line1\": \"example\",\n        \"address_line2\": \"example\",\n        \"state\": \"example\",\n        \"zipode\": \"example\",\n        \"email\": \"example\",\n        \"city\": \"example\",\n        \"legal_name\": \"example\",\n        \"legal_number\": \"example\",\n        \"timezone\": \"example\",\n        \"billing_configuration\": {\n            \"invoice_footer\": \"example\",\n            \"invoice_grace_period\": 0,\n            \"vat_rate\": 0\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    },
+    {
+      "name": "Plans",
+      "item": [
+        {
+          "name": "Create a new plan",
+          "request": {
+            "description": "Create a new plan",
+            "url": {
+              "raw": "{{baseUrl}}/plans",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "plans"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"plan\": {\n        \"name\": \"example\",\n        \"code\": \"example\",\n        \"interval\": \"weekly\",\n        \"description\": \"example\",\n        \"amount_cents\": 0,\n        \"amount_currency\": \"example\",\n        \"trial_period\": 0,\n        \"pay_in_advance\": true,\n        \"bill_charges_monthly\": true,\n        \"charges\": [\n            {\n                \"id\": \"example\",\n                \"billable_metric_id\": \"example\",\n                \"charge_model\": \"standard\",\n                \"properties\": {\n                    \"example\": \"UNKNOWN\"\n                },\n                \"group_properties\": [\n                    {\n                        \"group_id\": \"example\",\n                        \"values\": {\n                            \"example\": \"UNKNOWN\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Fin plan by code",
+          "request": {
+            "description": "Return a single plan",
+            "url": {
+              "raw": "{{baseUrl}}/plans/:code",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "plans",
+                ":code"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "code",
+                  "value": "",
+                  "description": "Code of the existing plan"
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Update an existing plan",
+          "request": {
+            "description": "Update an existing plan by code",
+            "url": {
+              "raw": "{{baseUrl}}/plans/:code",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "plans",
+                ":code"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "code",
+                  "value": "",
+                  "description": "Code of the existing plan"
+                }
+              ]
+            },
+            "header": [],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"plan\": {\n        \"name\": \"example\",\n        \"code\": \"example\",\n        \"interval\": \"weekly\",\n        \"description\": \"example\",\n        \"amount_cents\": 0,\n        \"amount_currency\": \"example\",\n        \"trial_period\": 0,\n        \"pay_in_advance\": true,\n        \"bill_charges_monthly\": true,\n        \"charges\": [\n            {\n                \"id\": \"example\",\n                \"billable_metric_id\": \"example\",\n                \"charge_model\": \"standard\",\n                \"properties\": {\n                    \"example\": \"UNKNOWN\"\n                },\n                \"group_properties\": [\n                    {\n                        \"group_id\": \"example\",\n                        \"values\": {\n                            \"example\": \"UNKNOWN\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Delete a plan",
+          "request": {
+            "description": "Delete a plan",
+            "url": {
+              "raw": "{{baseUrl}}/plans/:code",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "plans",
+                ":code"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "code",
+                  "value": "",
+                  "description": "Code of the existing plan"
+                }
+              ]
+            },
+            "header": [],
+            "method": "DELETE"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find plans",
+          "request": {
+            "description": "Find all plans in certain organisation",
+            "url": {
+              "raw": "{{baseUrl}}/plans?page=&per_page=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "plans"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "",
+                  "description": "Number of page"
+                },
+                {
+                  "key": "per_page",
+                  "value": "",
+                  "description": "Number of records per page"
+                }
+              ],
+              "variable": []
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    },
+    {
+      "name": "Subscriptions",
+      "item": [
+        {
+          "name": "Assign a plan to a customer",
+          "request": {
+            "description": "Assign a plan to a customer",
+            "url": {
+              "raw": "{{baseUrl}}/subscriptions",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "subscriptions"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"subscription\": {\n        \"external_customer_id\": \"example\",\n        \"plan_code\": \"example\",\n        \"name\": \"example\",\n        \"external_id\": \"example\",\n        \"billing_time\": \"calendar\",\n        \"subscription_at\": \"example\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Update an existing subscription",
+          "request": {
+            "description": "Update an existing subscription by external ID",
+            "url": {
+              "raw": "{{baseUrl}}/subscriptions/:external_id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "subscriptions",
+                ":external_id"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "external_id",
+                  "value": "",
+                  "description": "External ID of the existing subscription"
+                }
+              ]
+            },
+            "header": [],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"subscription\": {\n        \"name\": \"example\",\n        \"subscription_at\": \"example\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Terminate a subscription",
+          "request": {
+            "description": "Terminate a subscription",
+            "url": {
+              "raw": "{{baseUrl}}/subscriptions/:external_id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "subscriptions",
+                ":external_id"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "external_id",
+                  "value": "",
+                  "description": "External ID of the existing subscription"
+                }
+              ]
+            },
+            "header": [],
+            "method": "DELETE"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find subscriptions",
+          "request": {
+            "description": "Find all suscriptions for certain customer",
+            "url": {
+              "raw": "{{baseUrl}}/subscriptions?page=&per_page=&external_customer_id=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "subscriptions"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "",
+                  "description": "Number of page"
+                },
+                {
+                  "key": "per_page",
+                  "value": "",
+                  "description": "Number of records per page"
+                },
+                {
+                  "key": "external_customer_id",
+                  "value": "",
+                  "description": "External customer ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    },
+    {
+      "name": "Wallets",
+      "item": [
+        {
+          "name": "Create a new wallet",
+          "request": {
+            "description": "Create a new wallet",
+            "url": {
+              "raw": "{{baseUrl}}/wallets",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "wallets"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"wallet\": {\n        \"name\": \"example\",\n        \"rate_amount\": 0,\n        \"currency\": \"example\",\n        \"paid_credits\": 0,\n        \"granted_credits\": 0,\n        \"external_customer_id\": \"example\",\n        \"expiration_at\": \"example\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find wallet",
+          "request": {
+            "description": "Return a wallet",
+            "url": {
+              "raw": "{{baseUrl}}/wallets/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "wallets",
+                ":id"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "Lago ID of the existing wallet"
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Update an existing wallet",
+          "request": {
+            "description": "Update an existing wallet",
+            "url": {
+              "raw": "{{baseUrl}}/wallets/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "wallets",
+                ":id"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "Lago ID of the existing wallet"
+                }
+              ]
+            },
+            "header": [],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"wallet\": {\n        \"name\": \"example\",\n        \"expiration_at\": \"example\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Delete a wallet",
+          "request": {
+            "description": "Delete a wallet",
+            "url": {
+              "raw": "{{baseUrl}}/wallets/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "wallets",
+                ":id"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "Lago ID of the existing wallet"
+                }
+              ]
+            },
+            "header": [],
+            "method": "DELETE"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find wallets",
+          "request": {
+            "description": "Find all wallets for certain customer",
+            "url": {
+              "raw": "{{baseUrl}}/wallets?page=&per_page=&external_customer_id=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "wallets"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "",
+                  "description": "Number of page"
+                },
+                {
+                  "key": "per_page",
+                  "value": "",
+                  "description": "Number of records per page"
+                },
+                {
+                  "key": "external_customer_id",
+                  "value": "",
+                  "description": "External customer ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Create a new wallet transaction",
+          "request": {
+            "description": "Create a new wallet transaction",
+            "url": {
+              "raw": "{{baseUrl}}/wallet_transactions",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "wallet_transactions"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"wallet_transaction\": {\n        \"wallet_id\": \"example\",\n        \"paid_credits\": 0,\n        \"granted_credits\": 0\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "Find wallet transactions",
+          "request": {
+            "description": "Find all wallet transactions for certain wallet",
+            "url": {
+              "raw": "{{baseUrl}}/wallets/:id/wallet_transactions?page=&per_page=&status=&transaction_type=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "wallets",
+                ":id",
+                "wallet_transactions"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "",
+                  "description": "Number of page"
+                },
+                {
+                  "key": "per_page",
+                  "value": "",
+                  "description": "Number of records per page"
+                },
+                {
+                  "key": "status",
+                  "value": "",
+                  "description": "Status (pending or settled)"
+                },
+                {
+                  "key": "transaction_type",
+                  "value": "",
+                  "description": "Transaction Type (inbound or outbound)"
+                }
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "",
+                  "description": "Lago ID of the existing wallet"
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    },
+    {
+      "name": "Webhooks",
+      "item": [
+        {
+          "name": "Fetch webhook public key",
+          "request": {
+            "description": "Webhook public key",
+            "url": {
+              "raw": "{{baseUrl}}/webhooks/public_key",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "webhooks",
+                "public_key"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    }
+  ]
+}
