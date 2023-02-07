@@ -48,7 +48,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"add_on\": {\n        \"name\": \"example\",\n        \"code\": \"example\",\n        \"description\": \"example\",\n        \"amount_cents\": 0,\n        \"amount_currency\": \"example\"\n    }\n}",
+              "raw": "{\n    \"add_on\": {\n        \"name\": \"add_on_name\",\n        \"code\": \"add_on_code\",\n        \"amount_cents\": 5000,\n        \"amount_currency\": \"USD\",\n        \"description\": \"desc\"\n    }\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -56,7 +56,40 @@
               }
             }
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "description": "Create a new add-on",
+                "url": {
+                  "raw": "{{baseUrl}}/add_ons",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "add_ons"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"add_on\": {\n        \"name\": \"add_on_name\",\n        \"code\": \"add_on_code\",\n        \"amount_cents\": 5000,\n        \"amount_currency\": \"USD\",\n        \"description\": \"desc\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "body": "{\n    \"add_on\": {\n        \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n        \"name\": \"add_on_name\",\n        \"code\": \"add_on_code\",\n        \"amount_cents\": 5000,\n        \"amount_currency\": \"USD\",\n        \"description\": \"description\",\n        \"created_at\": \"2022-04-29T08:59:51Z\"\n    }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         },
         {
@@ -76,15 +109,46 @@
               "variable": [
                 {
                   "key": "code",
-                  "value": "",
-                  "description": "Code of the existing add-on"
+                  "description": "Code of the existing add-on",
+                  "value": "code"
                 }
               ]
             },
             "header": [],
             "method": "GET"
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "description": "Return a single add-on",
+                "url": {
+                  "raw": "{{baseUrl}}/add_ons/:code",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "add_ons",
+                    ":code"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "code",
+                      "description": "Code of the existing add-on",
+                      "value": "code"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "GET"
+              },
+              "body": "{\n    \"add_on\": {\n        \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n        \"name\": \"add_on_name\",\n        \"code\": \"add_on_code\",\n        \"amount_cents\": 5000,\n        \"amount_currency\": \"USD\",\n        \"description\": \"description\",\n        \"created_at\": \"2022-04-29T08:59:51Z\"\n    }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         },
         {
@@ -104,8 +168,8 @@
               "variable": [
                 {
                   "key": "code",
-                  "value": "",
-                  "description": "Code of the existing add-on"
+                  "description": "Code of the existing add-on",
+                  "value": "code"
                 }
               ]
             },
@@ -113,7 +177,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"add_on\": {\n        \"name\": \"example\",\n        \"code\": \"example\",\n        \"description\": \"example\",\n        \"amount_cents\": 0,\n        \"amount_currency\": \"example\"\n    }\n}",
+              "raw": "{\n    \"add_on\": {\n        \"name\": \"add_on_name\",\n        \"code\": \"add_on_code\",\n        \"amount_cents\": 5000,\n        \"amount_currency\": \"USD\",\n        \"description\": \"desc\"\n    }\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -121,7 +185,47 @@
               }
             }
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "description": "Update an existing add-on by code",
+                "url": {
+                  "raw": "{{baseUrl}}/add_ons/:code",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "add_ons",
+                    ":code"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "code",
+                      "description": "Code of the existing add-on",
+                      "value": "code"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"add_on\": {\n        \"name\": \"add_on_name\",\n        \"code\": \"add_on_code\",\n        \"amount_cents\": 5000,\n        \"amount_currency\": \"USD\",\n        \"description\": \"desc\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "body": "{\n    \"add_on\": {\n        \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n        \"name\": \"add_on_name\",\n        \"code\": \"add_on_code\",\n        \"amount_cents\": 5000,\n        \"amount_currency\": \"USD\",\n        \"description\": \"description\",\n        \"created_at\": \"2022-04-29T08:59:51Z\"\n    }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         },
         {
@@ -141,23 +245,54 @@
               "variable": [
                 {
                   "key": "code",
-                  "value": "",
-                  "description": "Code of the existing add-on"
+                  "description": "Code of the existing add-on",
+                  "value": "code"
                 }
               ]
             },
             "header": [],
             "method": "DELETE"
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "description": "Delete an add-on",
+                "url": {
+                  "raw": "{{baseUrl}}/add_ons/:code",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "add_ons",
+                    ":code"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "code",
+                      "description": "Code of the existing add-on",
+                      "value": "code"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "DELETE"
+              },
+              "body": "{\n    \"add_on\": {\n        \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n        \"name\": \"add_on_name\",\n        \"code\": \"add_on_code\",\n        \"amount_cents\": 5000,\n        \"amount_currency\": \"USD\",\n        \"description\": \"description\",\n        \"created_at\": \"2022-04-29T08:59:51Z\"\n    }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         },
         {
           "name": "Find add-ons",
           "request": {
-            "description": "Find all add-ons in certain organisation",
+            "description": "Get all add-ons in certain organisation",
             "url": {
-              "raw": "{{baseUrl}}/add_ons?page=&per_page=",
+              "raw": "{{baseUrl}}/add_ons?page=1&per_page=2",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -167,13 +302,13 @@
               "query": [
                 {
                   "key": "page",
-                  "value": "",
-                  "description": "Number of page"
+                  "description": "Number of page",
+                  "value": "1"
                 },
                 {
                   "key": "per_page",
-                  "value": "",
-                  "description": "Number of records per page"
+                  "description": "Number of records per page",
+                  "value": "2"
                 }
               ],
               "variable": []
@@ -181,7 +316,42 @@
             "header": [],
             "method": "GET"
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "description": "Get all add-ons in certain organisation",
+                "url": {
+                  "raw": "{{baseUrl}}/add_ons?page=1&per_page=2",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "add_ons"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "description": "Number of page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "description": "Number of records per page",
+                      "value": "2"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [],
+                "method": "GET"
+              },
+              "body": "{\n    \"add_ons\": [\n        {\n            \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n            \"name\": \"add_on_name\",\n            \"code\": \"add_on_code\",\n            \"amount_cents\": 5000,\n            \"amount_currency\": \"USD\",\n            \"description\": \"description\",\n            \"created_at\": \"2022-04-29T08:59:51Z\"\n        }\n    ]\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         },
         {
@@ -203,7 +373,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"applied_add_on\": {\n        \"external_customer_id\": \"example\",\n        \"add_on_code\": \"example\",\n        \"amount_cents\": 0,\n        \"amount_currency\": \"example\"\n    }\n}",
+              "raw": "{\n    \"applied_add_on\": {\n        \"external_customer_id\": \"5eb02857-a71e-4ea2-bcf9-57d3a41bc6ba\",\n        \"add_on_code\": \"code\",\n        \"amount_cents\": 123,\n        \"amount_currency\": \"EUR\"\n    }\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -211,7 +381,40 @@
               }
             }
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "description": "Apply an add-on to a customer",
+                "url": {
+                  "raw": "{{baseUrl}}/applied_add_ons",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "applied_add_ons"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"applied_add_on\": {\n        \"external_customer_id\": \"5eb02857-a71e-4ea2-bcf9-57d3a41bc6ba\",\n        \"add_on_code\": \"code\",\n        \"amount_cents\": 123,\n        \"amount_currency\": \"EUR\"\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "body": "{\n    \"applied_add_on\": {\n        \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n        \"lago_add_on_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n        \"add_on_code\": \"add-on-code\",\n        \"external_customer_id\": \"5eb02857-a71e-4ea2-bcf9-57d3a41bc6ba\",\n        \"lago_customer_id\": \"99a6094e-199b-4101-896a-54e927ce7bd7\",\n        \"amount_cents\": 123,\n        \"amount_currency\": \"EUR\",\n        \"created_at\": \"2022-04-29T08:59:51Z\"\n    }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         }
       ],
@@ -239,7 +442,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"billable_metric\": {\n        \"name\": \"example\",\n        \"code\": \"example\",\n        \"description\": \"example\",\n        \"field_name\": \"example\",\n        \"aggregation_type\": \"count_agg\",\n        \"group\": {\n            \"key\": \"example\",\n            \"values\": [\n                \"UNKNOWN\"\n            ]\n        }\n    }\n}",
+              "raw": "{\n    \"billable_metric\": {\n        \"name\": \"bm_name\",\n        \"code\": \"bm_code\",\n        \"description\": \"description\",\n        \"aggregation_type\": \"sum_agg\",\n        \"field_name\": \"amount_sum\",\n        \"group\": {\n            \"key\": \"country\",\n            \"values\": [\n                \"france\",\n                \"italy\",\n                \"spain\"\n            ]\n        }\n    }\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -247,7 +450,40 @@
               }
             }
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "description": "Create a new billable metric",
+                "url": {
+                  "raw": "{{baseUrl}}/billable_metrics",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "billable_metrics"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"billable_metric\": {\n        \"name\": \"bm_name\",\n        \"code\": \"bm_code\",\n        \"description\": \"description\",\n        \"aggregation_type\": \"sum_agg\",\n        \"field_name\": \"amount_sum\",\n        \"group\": {\n            \"key\": \"country\",\n            \"values\": [\n                \"france\",\n                \"italy\",\n                \"spain\"\n            ]\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "body": "{\n    \"billable_metric\": {\n        \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n        \"name\": \"bm_name\",\n        \"code\": \"bm_code\",\n        \"description\": \"description\",\n        \"aggregation_type\": \"sum_agg\",\n        \"field_name\": \"amount_sum\",\n        \"created_at\": \"2022-04-29T08:59:51Z\",\n        \"group\": {},\n        \"active_subscriptions_count\": 0,\n        \"draft_invoices_count\": 0\n    }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         },
         {
@@ -267,15 +503,46 @@
               "variable": [
                 {
                   "key": "code",
-                  "value": "",
-                  "description": "Code of the existing billable metric"
+                  "description": "Code of the existing billable metric",
+                  "value": "code"
                 }
               ]
             },
             "header": [],
             "method": "GET"
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "description": "Return a single billable metric",
+                "url": {
+                  "raw": "{{baseUrl}}/billable_metrics/:code",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "billable_metrics",
+                    ":code"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "code",
+                      "description": "Code of the existing billable metric",
+                      "value": "code"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "GET"
+              },
+              "body": "{\n    \"billable_metric\": {\n        \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n        \"name\": \"bm_name\",\n        \"code\": \"bm_code\",\n        \"description\": \"description\",\n        \"aggregation_type\": \"sum_agg\",\n        \"field_name\": \"amount_sum\",\n        \"created_at\": \"2022-04-29T08:59:51Z\",\n        \"group\": {},\n        \"active_subscriptions_count\": 0,\n        \"draft_invoices_count\": 0\n    }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         },
         {
@@ -295,8 +562,8 @@
               "variable": [
                 {
                   "key": "code",
-                  "value": "",
-                  "description": "Code of the existing billable metric"
+                  "description": "Code of the existing billable metric",
+                  "value": "code"
                 }
               ]
             },
@@ -304,7 +571,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"billable_metric\": {\n        \"name\": \"example\",\n        \"code\": \"example\",\n        \"description\": \"example\",\n        \"field_name\": \"example\",\n        \"aggregation_type\": \"count_agg\",\n        \"group\": {\n            \"key\": \"example\",\n            \"values\": [\n                \"UNKNOWN\"\n            ]\n        }\n    }\n}",
+              "raw": "{\n    \"billable_metric\": {\n        \"name\": \"bm_name\",\n        \"code\": \"bm_code\",\n        \"description\": \"description\",\n        \"aggregation_type\": \"sum_agg\",\n        \"field_name\": \"amount_sum\",\n        \"group\": {\n            \"key\": \"country\",\n            \"values\": [\n                \"france\",\n                \"italy\",\n                \"spain\"\n            ]\n        }\n    }\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -312,7 +579,47 @@
               }
             }
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "description": "Update an existing billable metric by code",
+                "url": {
+                  "raw": "{{baseUrl}}/billable_metrics/:code",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "billable_metrics",
+                    ":code"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "code",
+                      "description": "Code of the existing billable metric",
+                      "value": "code"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"billable_metric\": {\n        \"name\": \"bm_name\",\n        \"code\": \"bm_code\",\n        \"description\": \"description\",\n        \"aggregation_type\": \"sum_agg\",\n        \"field_name\": \"amount_sum\",\n        \"group\": {\n            \"key\": \"country\",\n            \"values\": [\n                \"france\",\n                \"italy\",\n                \"spain\"\n            ]\n        }\n    }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "body": "{\n    \"billable_metric\": {\n        \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n        \"name\": \"bm_name\",\n        \"code\": \"bm_code\",\n        \"description\": \"description\",\n        \"aggregation_type\": \"sum_agg\",\n        \"field_name\": \"amount_sum\",\n        \"created_at\": \"2022-04-29T08:59:51Z\",\n        \"group\": {},\n        \"active_subscriptions_count\": 0,\n        \"draft_invoices_count\": 0\n    }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         },
         {
@@ -332,23 +639,54 @@
               "variable": [
                 {
                   "key": "code",
-                  "value": "",
-                  "description": "Code of the existing billable metric"
+                  "description": "Code of the existing billable metric",
+                  "value": "code"
                 }
               ]
             },
             "header": [],
             "method": "DELETE"
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "description": "Delete a billable metric",
+                "url": {
+                  "raw": "{{baseUrl}}/billable_metrics/:code",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "billable_metrics",
+                    ":code"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "key": "code",
+                      "description": "Code of the existing billable metric",
+                      "value": "code"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "DELETE"
+              },
+              "body": "{\n    \"billable_metric\": {\n        \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n        \"name\": \"bm_name\",\n        \"code\": \"bm_code\",\n        \"description\": \"description\",\n        \"aggregation_type\": \"sum_agg\",\n        \"field_name\": \"amount_sum\",\n        \"created_at\": \"2022-04-29T08:59:51Z\",\n        \"group\": {},\n        \"active_subscriptions_count\": 0,\n        \"draft_invoices_count\": 0\n    }\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         },
         {
           "name": "Find Billable metrics",
           "request": {
-            "description": "Find all billable metrics in certain organisation",
+            "description": "Get all billable metrics in certain organisation",
             "url": {
-              "raw": "{{baseUrl}}/billable_metrics?page=&per_page=",
+              "raw": "{{baseUrl}}/billable_metrics?page=3&per_page=2",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -358,13 +696,13 @@
               "query": [
                 {
                   "key": "page",
-                  "value": "",
-                  "description": "Number of page"
+                  "description": "Number of page",
+                  "value": "3"
                 },
                 {
                   "key": "per_page",
-                  "value": "",
-                  "description": "Number of records per page"
+                  "description": "Number of records per page",
+                  "value": "2"
                 }
               ],
               "variable": []
@@ -372,7 +710,42 @@
             "header": [],
             "method": "GET"
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "description": "Get all billable metrics in certain organisation",
+                "url": {
+                  "raw": "{{baseUrl}}/billable_metrics?page=3&per_page=2",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "billable_metrics"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "description": "Number of page",
+                      "value": "3"
+                    },
+                    {
+                      "key": "per_page",
+                      "description": "Number of records per page",
+                      "value": "2"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [],
+                "method": "GET"
+              },
+              "body": "{\n    \"billable_metrics\": [\n        {\n            \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n            \"name\": \"bm_name\",\n            \"code\": \"bm_code\",\n            \"description\": \"description\",\n            \"aggregation_type\": \"sum_agg\",\n            \"field_name\": \"amount_sum\",\n            \"created_at\": \"2022-04-29T08:59:51Z\",\n            \"group\": {},\n            \"active_subscriptions_count\": 0,\n            \"draft_invoices_count\": 0\n        }\n    ]\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         },
         {
@@ -380,7 +753,7 @@
           "request": {
             "description": "Find all billable metric groups in certain organisation",
             "url": {
-              "raw": "{{baseUrl}}/billable_metrics/:code/groups?page=&per_page=",
+              "raw": "{{baseUrl}}/billable_metrics/:code/groups?page=3&per_page=2",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -392,27 +765,70 @@
               "query": [
                 {
                   "key": "page",
-                  "value": "",
-                  "description": "Number of page"
+                  "description": "Number of page",
+                  "value": "3"
                 },
                 {
                   "key": "per_page",
-                  "value": "",
-                  "description": "Number of records per page"
+                  "description": "Number of records per page",
+                  "value": "2"
                 }
               ],
               "variable": [
                 {
                   "key": "code",
-                  "value": "",
-                  "description": "Code of the existing billable metric"
+                  "description": "Code of the existing billable metric",
+                  "value": "code"
                 }
               ]
             },
             "header": [],
             "method": "GET"
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "description": "Find all billable metric groups in certain organisation",
+                "url": {
+                  "raw": "{{baseUrl}}/billable_metrics/:code/groups?page=3&per_page=2",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "billable_metrics",
+                    ":code",
+                    "groups"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "description": "Number of page",
+                      "value": "3"
+                    },
+                    {
+                      "key": "per_page",
+                      "description": "Number of records per page",
+                      "value": "2"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "code",
+                      "description": "Code of the existing billable metric",
+                      "value": "code"
+                    }
+                  ]
+                },
+                "header": [],
+                "method": "GET"
+              },
+              "body": "{\n    \"groups\": [\n        {\n            \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n            \"key\": \"group_key\",\n            \"value\": \"group_value\"\n        }\n    ]\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         }
       ],
