@@ -1,12 +1,12 @@
 {
   "info": {
-    "name": "api",
+    "name": "Lago API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
     {
       "key": "baseUrl",
-      "value": "https://api.example.com",
+      "value": "https://api.getlago.com/api/v1",
       "type": "string"
     },
     {
@@ -1879,34 +1879,6 @@
                   "description": "Lago ID of the existing wallet"
                 }
               ]
-            },
-            "header": [],
-            "method": "GET"
-          },
-          "response": [],
-          "_type": "endpoint"
-        }
-      ],
-      "_type": "container"
-    },
-    {
-      "name": "Webhooks",
-      "item": [
-        {
-          "name": "Fetch webhook public key",
-          "request": {
-            "description": "Webhook public key",
-            "url": {
-              "raw": "{{baseUrl}}/webhooks/public_key",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "webhooks",
-                "public_key"
-              ],
-              "query": [],
-              "variable": []
             },
             "header": [],
             "method": "GET"
