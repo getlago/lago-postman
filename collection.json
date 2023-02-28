@@ -27,7 +27,7 @@
   },
   "item": [
     {
-      "name": "Add Ons",
+      "name": "Add-ons Service",
       "item": [
         {
           "name": "Create a new add-on",
@@ -44,7 +44,13 @@
               "query": [],
               "variable": []
             },
-            "header": [],
+            "header": [
+              {
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "method": "POST",
             "body": {
               "mode": "raw",
@@ -74,7 +80,13 @@
                   "query": [],
                   "variable": []
                 },
-                "header": [],
+                "header": [
+                  {
+                    "type": "text",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
                 "method": "POST",
                 "body": {
                   "mode": "raw",
@@ -114,7 +126,13 @@
                 }
               ]
             },
-            "header": [],
+            "header": [
+              {
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "method": "GET"
           },
           "response": [
@@ -142,7 +160,13 @@
                     }
                   ]
                 },
-                "header": [],
+                "header": [
+                  {
+                    "type": "text",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
                 "method": "GET"
               },
               "body": "{\n    \"add_on\": {\n        \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n        \"name\": \"add_on_name\",\n        \"code\": \"add_on_code\",\n        \"amount_cents\": 5000,\n        \"amount_currency\": \"USD\",\n        \"description\": \"description\",\n        \"created_at\": \"2022-04-29T08:59:51Z\"\n    }\n}",
@@ -173,7 +197,13 @@
                 }
               ]
             },
-            "header": [],
+            "header": [
+              {
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "method": "PUT",
             "body": {
               "mode": "raw",
@@ -210,7 +240,13 @@
                     }
                   ]
                 },
-                "header": [],
+                "header": [
+                  {
+                    "type": "text",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
                 "method": "PUT",
                 "body": {
                   "mode": "raw",
@@ -250,7 +286,13 @@
                 }
               ]
             },
-            "header": [],
+            "header": [
+              {
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "method": "DELETE"
           },
           "response": [
@@ -278,7 +320,13 @@
                     }
                   ]
                 },
-                "header": [],
+                "header": [
+                  {
+                    "type": "text",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
                 "method": "DELETE"
               },
               "body": "{\n    \"add_on\": {\n        \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n        \"name\": \"add_on_name\",\n        \"code\": \"add_on_code\",\n        \"amount_cents\": 5000,\n        \"amount_currency\": \"USD\",\n        \"description\": \"description\",\n        \"created_at\": \"2022-04-29T08:59:51Z\"\n    }\n}",
@@ -313,7 +361,13 @@
               ],
               "variable": []
             },
-            "header": [],
+            "header": [
+              {
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "method": "GET"
           },
           "response": [
@@ -345,7 +399,13 @@
                   ],
                   "variable": []
                 },
-                "header": [],
+                "header": [
+                  {
+                    "type": "text",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
                 "method": "GET"
               },
               "body": "{\n    \"add_ons\": [\n        {\n            \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n            \"name\": \"add_on_name\",\n            \"code\": \"add_on_code\",\n            \"amount_cents\": 5000,\n            \"amount_currency\": \"USD\",\n            \"description\": \"description\",\n            \"created_at\": \"2022-04-29T08:59:51Z\"\n        }\n    ]\n}",
@@ -369,7 +429,13 @@
               "query": [],
               "variable": []
             },
-            "header": [],
+            "header": [
+              {
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "method": "POST",
             "body": {
               "mode": "raw",
@@ -399,7 +465,13 @@
                   "query": [],
                   "variable": []
                 },
-                "header": [],
+                "header": [
+                  {
+                    "type": "text",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
                 "method": "POST",
                 "body": {
                   "mode": "raw",
@@ -421,7 +493,7 @@
       "_type": "container"
     },
     {
-      "name": "Billable Metrics",
+      "name": "Billable Metrics Service",
       "item": [
         {
           "name": "Create a new billable metric",
@@ -438,7 +510,13 @@
               "query": [],
               "variable": []
             },
-            "header": [],
+            "header": [
+              {
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "method": "POST",
             "body": {
               "mode": "raw",
@@ -468,7 +546,13 @@
                   "query": [],
                   "variable": []
                 },
-                "header": [],
+                "header": [
+                  {
+                    "type": "text",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
                 "method": "POST",
                 "body": {
                   "mode": "raw",
@@ -508,7 +592,13 @@
                 }
               ]
             },
-            "header": [],
+            "header": [
+              {
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "method": "GET"
           },
           "response": [
@@ -536,7 +626,13 @@
                     }
                   ]
                 },
-                "header": [],
+                "header": [
+                  {
+                    "type": "text",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
                 "method": "GET"
               },
               "body": "{\n    \"billable_metric\": {\n        \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n        \"name\": \"bm_name\",\n        \"code\": \"bm_code\",\n        \"description\": \"description\",\n        \"aggregation_type\": \"sum_agg\",\n        \"field_name\": \"amount_sum\",\n        \"created_at\": \"2022-04-29T08:59:51Z\",\n        \"group\": {},\n        \"active_subscriptions_count\": 0,\n        \"draft_invoices_count\": 0\n    }\n}",
@@ -567,7 +663,13 @@
                 }
               ]
             },
-            "header": [],
+            "header": [
+              {
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "method": "PUT",
             "body": {
               "mode": "raw",
@@ -604,7 +706,13 @@
                     }
                   ]
                 },
-                "header": [],
+                "header": [
+                  {
+                    "type": "text",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
                 "method": "PUT",
                 "body": {
                   "mode": "raw",
@@ -644,7 +752,13 @@
                 }
               ]
             },
-            "header": [],
+            "header": [
+              {
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "method": "DELETE"
           },
           "response": [
@@ -672,7 +786,13 @@
                     }
                   ]
                 },
-                "header": [],
+                "header": [
+                  {
+                    "type": "text",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
                 "method": "DELETE"
               },
               "body": "{\n    \"billable_metric\": {\n        \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n        \"name\": \"bm_name\",\n        \"code\": \"bm_code\",\n        \"description\": \"description\",\n        \"aggregation_type\": \"sum_agg\",\n        \"field_name\": \"amount_sum\",\n        \"created_at\": \"2022-04-29T08:59:51Z\",\n        \"group\": {},\n        \"active_subscriptions_count\": 0,\n        \"draft_invoices_count\": 0\n    }\n}",
@@ -707,7 +827,13 @@
               ],
               "variable": []
             },
-            "header": [],
+            "header": [
+              {
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "method": "GET"
           },
           "response": [
@@ -739,7 +865,13 @@
                   ],
                   "variable": []
                 },
-                "header": [],
+                "header": [
+                  {
+                    "type": "text",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
                 "method": "GET"
               },
               "body": "{\n    \"billable_metrics\": [\n        {\n            \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n            \"name\": \"bm_name\",\n            \"code\": \"bm_code\",\n            \"description\": \"description\",\n            \"aggregation_type\": \"sum_agg\",\n            \"field_name\": \"amount_sum\",\n            \"created_at\": \"2022-04-29T08:59:51Z\",\n            \"group\": {},\n            \"active_subscriptions_count\": 0,\n            \"draft_invoices_count\": 0\n        }\n    ]\n}",
@@ -782,7 +914,13 @@
                 }
               ]
             },
-            "header": [],
+            "header": [
+              {
+                "type": "text",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "method": "GET"
           },
           "response": [
@@ -822,7 +960,13 @@
                     }
                   ]
                 },
-                "header": [],
+                "header": [
+                  {
+                    "type": "text",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
                 "method": "GET"
               },
               "body": "{\n    \"groups\": [\n        {\n            \"lago_id\": \"b7ab2926-1de8-4428-9bcd-779314ac129b\",\n            \"key\": \"group_key\",\n            \"value\": \"group_value\"\n        }\n    ]\n}",
@@ -835,7 +979,7 @@
       "_type": "container"
     },
     {
-      "name": "Coupons",
+      "name": "Coupons Service",
       "item": [
         {
           "name": "Create a new coupon",
@@ -1068,7 +1212,7 @@
       "_type": "container"
     },
     {
-      "name": "Credit Notes",
+      "name": "Credit Notes Service",
       "item": [
         {
           "name": "Create a new Credit note",
@@ -1264,7 +1408,7 @@
       "_type": "container"
     },
     {
-      "name": "Customers",
+      "name": "Customers Service",
       "item": [
         {
           "name": "Create a customer",
@@ -1395,7 +1539,7 @@
       "_type": "container"
     },
     {
-      "name": "Events",
+      "name": "Events Service",
       "item": [
         {
           "name": "Create a new event",
@@ -1490,7 +1634,7 @@
       "_type": "container"
     },
     {
-      "name": "Invoices",
+      "name": "Invoices Service",
       "item": [
         {
           "name": "Find invoice by ID",
@@ -1725,7 +1869,7 @@
       "_type": "container"
     },
     {
-      "name": "Organizations",
+      "name": "Organizations Service",
       "item": [
         {
           "name": "Update an existing Organization",
@@ -1761,7 +1905,7 @@
       "_type": "container"
     },
     {
-      "name": "Plans",
+      "name": "Plans Service",
       "item": [
         {
           "name": "Create a new plan",
@@ -1922,7 +2066,7 @@
       "_type": "container"
     },
     {
-      "name": "Subscriptions",
+      "name": "Subscriptions Service",
       "item": [
         {
           "name": "Assign a plan to a customer",
@@ -2060,7 +2204,7 @@
       "_type": "container"
     },
     {
-      "name": "Wallets",
+      "name": "Wallets Service",
       "item": [
         {
           "name": "Create a new wallet",
