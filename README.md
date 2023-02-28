@@ -2,7 +2,7 @@
 
 This repository contains a [Postman Collection](/collection.json) for the [Lago API](https://lago.mintlify.app/api-reference/intro).
 
-[![Open in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/fern-api/workspace/fern-lago)
+[![Open in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/fern-bot/workspace/lago/overview)
 
 ## What is a Postman Collection?
 
@@ -10,4 +10,4 @@ This repository contains a [Postman Collection](/collection.json) for the [Lago 
 
 ## Issues
 
-Feel free to [leave an issue](https://github.com/fern-lago/lago-postman/issues) on this repo.
+Feel free to [leave an issue](https://github.com/getlago/lago-postman/issues) on this repo.
